@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Cabin", sans-serif;
     color: #111;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -364,7 +365,7 @@ margin-top: 20px;
 
 .contact{
     width: 100%;
-    background-color: #111;
+    background-color: #0e0e0e;
     padding: 40px;
 }
 .contact h2{
@@ -394,7 +395,7 @@ margin-top: 20px;
     align-items: center;
     padding:20px;
     gap: 10px;
-    background-color:#46464656;
+    background-color: #000;;
     border-radius: 10px;
     width: 40%;
     
@@ -421,6 +422,116 @@ margin-top: 20px;
     text-align: center;
     color: #fff;
     padding: 4px;
+}
+
+
+
+
+#projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* Projects Container - Flexbox setup for layout */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 30px; /* Space between cards */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Project Card Styling */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures image corners are rounded */
+    width: 100%; /* Default to full width on mobile */
+    max-width: 350px; /* Maximum size for a single card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Makes the card's content stack vertically */
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.project-image-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Text Content Styling */
+.project-content {
+    padding: 20px;
+    flex-grow: 1; /* Allows content to take up remaining space */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.project-description {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Link Styling */
+.project-link {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start; /* Aligns link to the left */
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s ease, color 0.2s ease;
+}
+
+.project-link:hover {
+    color: #1e628a;
+    border-bottom: 2px solid #2980b9;
+}
+
+/* --- Media Query for Responsiveness --- */
+@media (max-width: 768px) {
+    .project-card {
+        /* On smaller screens, the max-width makes it look better */
+        margin-bottom: 20px;
+    }
+
+    #projects h1 {
+        font-size: 2em;
+    }
 }
 /* --- Mobile Adjustment (optional, to keep text centered) --- */
 @media (max-width: 600px) {
@@ -642,20 +753,151 @@ box-shadow:none
 }
 .contact{
     padding: 20px;
+    background-color: #080808;
 }
 .contact h2{
     font-size: 30px;
 }
 .contact h3{
     font-size: 16px;
+    margin-top: 20px;
 }
 .contact-grid{
     flex-direction: column;
 }
 .contact-item{
-
+padding: 10px;
     width: 100%;
-    
+    background-color: transparent;
+}
+.contact-item a{
+    font-size: 18px;
+}
+.contact-icon{
+    width: 20px;
+}
+.contact-item img{
+    width: 100%;
+}
 }
 
+
+.about-us-section {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.aboutus-container {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px;
+}
+
+/* --- Headings & Mission --- */
+.about-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.values-title {
+    font-size: 24px;text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.mission-statement p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+
+
+/* --- Values List (Single, Clean Style) --- */
+.values-list {
+    padding: 0;
+    margin-top: 20px;
+}
+.values-block p{
+    line-height: 24px;
+}
+.values-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9ecef;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+.values-list li:last-child {
+    border-bottom: none;
+}
+
+.values-list li strong {
+    color: #007bff; /* Blue for key differentiators */
+}
+
+/* --- Process Block and Horizontal Rule --- */
+.process-block {
+    margin-top: 10px;
+    padding-top: 20px;
+}
+.process-block p{
+    line-height: 24px;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 123, 255, 0.75), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* --- Call to Action --- */
+.call-to-action {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.call-to-action p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--blue);
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .aboutus-container {
+        padding: 25px;
+    }
+    .about-us-section {
+
+  
+        width: 90%;
+
+    }
+    .about-title {
+        font-size: 2em;
+    }
 }
