@@ -254,7 +254,6 @@ nav .menu-toggle .hamburger::after {
   .icon-placeholder {
     width: 50px;
     height: 50px;
-
     margin-bottom: 20px;
   }
   
@@ -282,10 +281,10 @@ nav .menu-toggle .hamburger::after {
   
 
 .work-methods{
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 50px;
-    padding: 10px 20px;
+    padding: 0%;
 }
 .work-methods h2{
     font-size: 2.4rem;
@@ -294,8 +293,28 @@ nav .menu-toggle .hamburger::after {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.work-methods h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto;
+    /* margin-bottom: 10px; */
+    text-align: center;
+    color: #fff;
+}
+.howheader{
+    background-image:linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.98)), url(./images/pexels-cookiecutter-1148820.jpg);
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    justify-content: center;
+    background-attachment: fixed;
+}
 .steps{
+    padding: 10px 20px;
 /* border: 1px solid rgb(216, 13, 108); */
 display: flex;
 flex-wrap: wrap;
@@ -339,6 +358,69 @@ margin-top: 20px;
     text-align: center;
     line-height: 25px;
     font-size: 16px;
+}
+
+
+
+.contact{
+    width: 100%;
+    background-color: #111;
+    padding: 40px;
+}
+.contact h2{
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+.contact h3{
+    text-align: center;
+    color: #fff;
+}
+.contact-grid{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+    margin-top: 20px;
+}
+.contact-item{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    gap: 10px;
+    background-color:#46464656;
+    border-radius: 10px;
+    width: 40%;
+    
+}
+.contact-icon{
+    width: 40px;
+}
+.contact-item img{
+    width: 100%;
+}
+.contact-item p {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.contact-item a{
+    color: #fff;
+    font-size: 22px;
+}
+.copyright{
+    background-color: #222;
+}
+.copyright p{
+    text-align: center;
+    color: #fff;
+    padding: 4px;
 }
 /* --- Mobile Adjustment (optional, to keep text centered) --- */
 @media (max-width: 600px) {
@@ -391,7 +473,18 @@ margin-top: 20px;
        border-right: none;
        /* border-bottom: 1px solid #444; */
     }
-
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        /* color: var(--blue); */
+        line-height: 1.3;
+        margin: 0 0 15px 0;
+      }
+      
+      .description {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
   }
 /* --- MEDIA QUERY FOR MOBILE STYLES --- */
 @media (max-width: 768px) {
@@ -483,18 +576,31 @@ margin-top: 20px;
     width: 100%;
     margin: auto;
     margin-top: 50px;
-    padding: 10px 20px;
-    background-color: #111111f5;
+    padding: 0;
+    background-color:rgba(0, 0, 0, 0.99);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
 .work-methods h2{
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: auto;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
     text-align: center;
     color: #fff;
+}
+.howheader{
+    background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.98)), url(./images/pexels-cookiecutter-1148820.jpg);
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    align-items: center;
+    /* border: 1px solid red; */
+    justify-content: center;
 }
 
 .steps{
@@ -502,14 +608,13 @@ flex-direction: column;
 justify-content: space-between;
 gap: 0px;
 align-items: stretch;
-
 }
 
 .step{
 /* border: 1px solid red; */
 width:100% ;
 margin-top: 20px;
-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
+box-shadow:none
 }
 .step .heading{
     /* border: 1px solid #000; */
@@ -517,8 +622,8 @@ box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: auto;
     background-color: #fff
 }
@@ -527,12 +632,30 @@ box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
 }
 .step-title{
     color: #fff;
+    font-size: 20px;
 }
 .step .detail{
     text-align: center;
     line-height: 25px;
     color: #fff;
     font-size: 16px;
+}
+.contact{
+    padding: 20px;
+}
+.contact h2{
+    font-size: 30px;
+}
+.contact h3{
+    font-size: 16px;
+}
+.contact-grid{
+    flex-direction: column;
+}
+.contact-item{
+
+    width: 100%;
+    
 }
 
 }
