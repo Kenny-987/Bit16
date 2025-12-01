@@ -480,10 +480,13 @@ margin-top: 20px;
 }
 
 .work-methods{
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 50px;
     padding: 10px 20px;
+    background-color: #111111f5;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .work-methods h2{
     font-size: 2.2rem;
@@ -491,6 +494,7 @@ margin-top: 20px;
     margin: auto;
     margin-bottom: 20px;
     text-align: center;
+    color: #fff;
 }
 
 .steps{
@@ -498,6 +502,7 @@ flex-direction: column;
 justify-content: space-between;
 gap: 0px;
 align-items: stretch;
+
 }
 
 .step{
@@ -515,12 +520,18 @@ box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
     width: 50px;
     height: 50px;
     margin: auto;
-    background-color: #1c274c;
+    background-color: #fff
 }
-
+.step .heading h3{
+    color: #111;
+}
+.step-title{
+    color: #fff;
+}
 .step .detail{
     text-align: center;
     line-height: 25px;
+    color: #fff;
     font-size: 16px;
 }
 
